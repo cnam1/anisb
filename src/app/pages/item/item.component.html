@@ -1,0 +1,34 @@
+<section class="body">
+  <app-loading *ngIf="loaded"></app-loading>
+  <div  *ngIf="!loaded && product">
+    <!--<header [ngStyle]="{ 'background-image':'url('+ product.url +')' }"
+            class="rk-portfolio-cover  item-inside-1">
+      <div class="item-inside__meta">
+        <h1 class="ae-u-bolder rk-portfolio-title ">{{ product.subtitulo }}</h1>
+        <p class="ae-theta rk-portfolio-category ">{{product.categoria}}</p>
+      </div>
+    </header>
+  -->
+    <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+      <div *ngFor="let t of product.tipos; let i = index">
+      <div *ngIf=" (i+1)%2!=0 "
+           class="ae-grid ae-grid--collapse au-xs-ptp-1">
+        <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
+          <h4 class="ae-u-bolder">{{t.producto}}</h4>
+          <p class="ae-eta">{{ t.desc }} </p>
+          <!--<p class="au-mb-3">It includes a A6 flyer, A5 folder, A4 horizontal paper and a business card mockup. You can easily put your own graphics and create a new layout according to your needs.</p>-->
+        </div>
+        <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img [src]="t.url"></div>
+      </div>
+      <div *ngIf=" (i+1)%2==0 "
+           class="ae-grid ae-grid--collapse">
+        <div class="ae-grid__item item-lg-8"><img [src]="t.url" ></div>
+        <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
+          <h4 class="ae-u-bolder">{{t.producto}}</h4>
+          <p class="ae-eta">{{ t.desc }} </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </section>

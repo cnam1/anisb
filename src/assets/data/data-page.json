@@ -1,0 +1,11 @@
+{
+    "email" : "anisbakery11@gmail.com",
+    "name" : "Anis Bakery",
+    "instagram" : "https://instagram.com/bakery.anis?igshid=1oxjoifvj8p66",
+    "worker_team" : [
+        {
+            "name" : "Ana Laura",
+            "last_name" : "Silva"
+        }
+    ]
+}
